@@ -1,0 +1,233 @@
+
+  
+  nav{
+    width:100%;
+  }
+  nav ul li{
+    display:inline-block;
+    list-style:none;
+    width:160px;
+    text-align:center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border: 1px dashed rgba(255,255,255, 0);
+    color:black;
+    padding:10px 0 10px 0;
+    margin:-1px -5px -1px -1px;
+    cursor:pointer;
+    transition:all .2s;
+    -webkit-transition:all .2s;
+    font-size: larger;
+  }
+  
+  
+ 
+  nav{
+    width:100%;
+  }
+  
+  nav ul li:hover{
+    /*border:1px dashed #fff;*/
+    background:rebeccapurple;
+    font-size: x-large;
+  }
+ 
+  nav ul{
+   
+    position:absolute;
+    width:100%;
+    padding:0;
+    z-index:100;
+  }
+  .main {
+    max-width: 300px;
+    padding: 10px;
+    margin: 15px auto;
+    background-color: #fff;
+  }
+ 
+  .logo
+  {
+    background-color: navy;
+  }
+  
+  .logo h2
+  {
+    display: inline;
+    color: pink;
+    text-align: left;
+    animation-name: Shreya;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    position: relative;
+  }
+  @keyframes Shreya
+  {
+    from
+    {
+        left: 0px;
+        color: palevioletred;
+    }
+    to
+    {
+        left:300px
+        
+       
+    }
+  }
+  :root {
+    --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+  }
+  
+  
+  .card {
+    background: #222;
+    border: 1px solid #dd2476;
+    color: rgba(250, 250, 250, 0.8);
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    border: 5px solid;
+    border-image-slice: 1;
+    background: var(--gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    border-image-source:  var(--gradient) !important; 
+    text-decoration: none;
+    transition: all .4s ease;
+  }
+  
+  .btn:hover, .btn:focus {
+        background: var(--gradient) !important;
+    -webkit-background-clip: none !important;
+    -webkit-text-fill-color: #fff !important;
+    border: 5px solid #fff !important; 
+    box-shadow: #222 1px 0 10px;
+    text-decoration: underline;
+  }
+  .card-img-top:hover 
+  {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1); 
+    border-radius: 50px;
+  }
+  .card-img-top
+  {
+    border-radius:30px ;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    width: 350px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #5a00ba;
+  }
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .card:hover .overlay {
+    opacity: 1;
+  }
+  *{
+    margin: 0;
+    list-style: 0;
+  }
+  .slider{
+    overflow: hidden;
+    width: 100%;
+    height: 350px;
+    position: relative;
+  }
+  figure{
+    width: 500%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    transition: all 30s linear;
+    animation: 40s slidy infinite ;
+  }
+  .slide{
+    width: 20%;
+    height: 100%;
+    float: left;
+    position: relative;
+  }
+  .slide img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+  }
+  @keyframes slidy {
+    0%{
+      left:0;
+    }
+    10%{
+      left: -100%;
+    }
+    20%{
+      left: -200%;
+    }
+    30%{
+      left: -300%;
+    }
+    40%{
+      left: -400%;
+    }
+    50%{
+      left: -400%;
+    }
+    60%{
+      left: -300%;
+    }
+    70%{
+      left: -200%;
+    }
+    85%{
+      left: -100%;
+    }
+    100%{
+      left: 0%;
+    }
+  
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+ 
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  
