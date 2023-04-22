@@ -27,6 +27,11 @@ include 'connection.php';
         $result=mysqli_query($con,$q);
 
      }
+     else {
+        $q="Select * from mentors";
+        $result=mysqli_query($con,$q);
+
+     }
  
 
 
@@ -132,9 +137,10 @@ include 'connection.php';
 
                 <input type="submit" name="button3"
                 value="Physics"/>
-                
+
                 <input type="submit" name="button4"
-                value="All"/> 
+                value="All"/>
+                        
     </form>
 </body>
 </head>
