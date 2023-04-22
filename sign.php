@@ -175,10 +175,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 
 <body>
     <nav id="navbar">
-        <div id="logo">
-            <img  src="hackathon-website.png" alt="logo">
-
-        </div>
+        
         <ul>
             <li class="item"><a href="home.html">HOME</a></li>
             <li class="item"><a href="#">SERVICES</a></li>
@@ -187,8 +184,12 @@ if($_SERVER['REQUEST_METHOD']=='POST')
         </ul>
     </nav>
     <section id="home">
-        <h1 class="primary">WE CARE FOR YOU!!</h1>
-        <h1 class="primary">Sign Up</h1>
+       
+        <div id="logo">
+            <img  src="hackathon-website.png" alt="logo" style="width:200px; height:100px">
+
+        </div>
+        <h1 class="text text-white">Sign Up</h1>
 
     </section>
     <section id="contact">
