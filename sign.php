@@ -140,19 +140,12 @@ background-color: yellow;
     height: 100px;
     width: 100px;
  }
- #clients-section::before{
-    content:'';
-    position:absolute;
-background: url('https://t4.ftcdn.net/jpg/03/54/47/59/360_F_354475964_y3BRv7haykgNl0r8IxCO3DGj0xCwqcZe.jpg') no-repeat center center/cover;
-    width:100%;
-    height: 80%;
-    z-index:-1;
-    opacity:0.2;
- }
+ 
  body {
  background-image: url("logogirl.jpeg");
  background-color: #cccccc;
  background-repeat:no-repeat;
+ background-size: 1800px 400px;
  
 
 }
