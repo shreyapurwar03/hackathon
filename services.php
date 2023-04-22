@@ -1,7 +1,26 @@
 <?php
 include 'connection.php';
-$q="Select * from mentors";
-$result=mysqli_query($con,$q);
+     
+     if(isset($_POST['button1'])) 
+     {
+        $sql="select * from mentors where name= 'shreya' "; 
+        //echo "Button 1".$sql;
+         $result=mysqli_query($con,$sql);
+
+     }
+     else if(isset($_POST['button2'])) {
+
+        $sql="select * from mentors where name= 'navya' "; 
+        //echo "Button 1".$sql;
+         $result=mysqli_query($con,$sql);
+
+     }
+     else{
+        $q="Select * from mentors";
+        $result=mysqli_query($con,$q);
+
+     }
+ 
 
 
 
@@ -26,7 +45,7 @@ $result=mysqli_query($con,$q);
  Fetching Data From Database
 </title>
 
-<body class="bg bg-dark ">
+<body class="bg bg-white ">
 <div class="container">
     <div class="row mt-5">
         <div class="column">
@@ -57,6 +76,7 @@ $result=mysqli_query($con,$q);
         </tr>
         <tr>
             <?php
+
             while($row=mysqli_fetch_assoc($result))
             {
 
@@ -76,6 +96,8 @@ $result=mysqli_query($con,$q);
 
             }
 ?>
+
+  
     </table>
 </div>     
 
@@ -85,6 +107,13 @@ $result=mysqli_query($con,$q);
 
 
 </div>
+<form method="post">
+        <input type="submit" name="button1"
+                value="English"/>
+         
+        <input type="submit" name="button2"
+                value="Maths"/>
+    </form>
 </body>
 </head>
 </html>
