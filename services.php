@@ -3,19 +3,26 @@ include 'connection.php';
      
      if(isset($_POST['button1'])) 
      {
-        $sql="select * from mentors where name= 'shreya' "; 
+        $sql="select * from mentors where subject= 'Accounts' "; 
         //echo "Button 1".$sql;
          $result=mysqli_query($con,$sql);
 
      }
      else if(isset($_POST['button2'])) {
 
-        $sql="select * from mentors where name= 'navya' "; 
+        $sql="select * from mentors where subject = 'Maths' "; 
         //echo "Button 1".$sql;
          $result=mysqli_query($con,$sql);
 
      }
-     else{
+     else if(isset($_POST['button3'])) 
+     {
+        $sql="select * from mentors where subject= 'Physics' "; 
+        //echo "Button 1".$sql;
+         $result=mysqli_query($con,$sql);
+
+     }
+     else if(isset($_POST['button4'])) {
         $q="Select * from mentors";
         $result=mysqli_query($con,$q);
 
@@ -42,8 +49,13 @@ include 'connection.php';
   <link rel="stylesheet" href="style2.css">
 </head>
 <title>
- Fetching Data From Database
+ Home Tutors
 </title>
+<h2 class="text text-white">
+    Mentoring of Girls by Girls 
+    <br>
+    Creating an Empowered Society
+    </h2>
 
 <body class="bg bg-white ">
 <div class="container">
@@ -73,6 +85,9 @@ include 'connection.php';
             <td>
                 Qualification
             </td>
+            <td>
+                Fees(Monthly)
+            </td>
         </tr>
         <tr>
             <?php
@@ -87,6 +102,7 @@ include 'connection.php';
             <td><?php echo $row['email id']?></td>
             <td><?php echo $row['subject']?></td>
             <td><?php echo $row['qualification']?></td>
+            <td><?php echo $row['Fees(Monthly)']?></td>
       
 
 
@@ -109,10 +125,16 @@ include 'connection.php';
 </div>
 <form method="post">
         <input type="submit" name="button1"
-                value="English"/>
+                value="Accounts"/>
          
         <input type="submit" name="button2"
                 value="Maths"/>
+
+                <input type="submit" name="button3"
+                value="Physics"/>
+                
+                <input type="submit" name="button4"
+                value="All"/> 
     </form>
 </body>
 </head>
