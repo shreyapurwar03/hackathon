@@ -178,7 +178,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
         
         <ul>
             <li class="item"><a href="home.html">HOME</a></li>
-            <li class="item"><a href="#">SERVICES</a></li>
+            <li class="item"><a href="service-menu.html">SERVICES</a></li>
             <li class="item"><a href="#">ABOUT</a></li>
             <li class="item"><a href="#">CONTACT US</a></li>
         </ul>
