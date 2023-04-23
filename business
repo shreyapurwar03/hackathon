@@ -1,0 +1,505 @@
+<html>
+    <head>
+        
+        
+        
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>
+    Home Page
+</title>
+<script>
+   var counter =0;
+$('#next').click(function(){
+  var pos = $('#fig').position();
+  if(counter < 4){
+    console.log(counter);
+    counter++;
+      $('#fig').css("left",pos.left-( $(window).innerWidth() ));
+  }
+  else{
+    $('#fig').css("left","0px");
+    counter=0;
+  }
+});
+</script>
+    </head>
+    <style> 
+  
+      nav{
+        width:100%;
+      }
+      nav ul li{
+        display:inline-block;
+        list-style:none;
+        width:160px;
+        text-align:center;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        border: 1px dashed rgba(255,255,255, 0);
+        color:black;
+        padding:10px 0 10px 0;
+        margin:-1px -5px -1px -1px;
+        cursor:pointer;
+        transition:all .2s;
+        -webkit-transition:all .2s;
+        font-size: larger;
+      }
+      
+      
+     
+      nav{
+        width:100%;
+      }
+      
+      nav ul li:hover{
+        /*border:1px dashed #fff;*/
+        background:rebeccapurple;
+        font-size: x-large;
+      }
+     
+      nav ul{
+       
+        position:absolute;
+        width:100%;
+        padding:0;
+        z-index:100;
+      }
+      .main {
+        max-width: 300px;
+        padding: 10px;
+        margin: 15px auto;
+        background-color: #fff;
+      }
+     
+      .logo
+      {
+        background-color: navy;
+      }
+      
+      .logo h2
+      {
+        display: inline;
+        color: pink;
+        text-align: left;
+        animation-name: Shreya;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        position: relative;
+      }
+      @keyframes Shreya
+      {
+        from
+        {
+            left: 0px;
+            color: palevioletred;
+        }
+        to
+        {
+            left:300px
+            
+           
+        }
+      }
+      :root {
+        --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+      }
+      
+      
+      .card {
+        background: #222;
+        border: 1px solid #dd2476;
+        color: rgba(250, 250, 250, 0.8);
+        margin-bottom: 2rem;
+      }
+      
+      .btn {
+        border: 5px solid;
+        border-image-slice: 1;
+        background: var(--gradient) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        border-image-source:  var(--gradient) !important; 
+        text-decoration: none;
+        transition: all .4s ease;
+      }
+      
+      .btn:hover, .btn:focus {
+            background: var(--gradient) !important;
+        -webkit-background-clip: none !important;
+        -webkit-text-fill-color: #fff !important;
+        border: 5px solid #fff !important; 
+        box-shadow: #222 1px 0 10px;
+        text-decoration: underline;
+      }
+      .card-img-top:hover 
+      {
+        -ms-transform: scale(1.5); /* IE 9 */
+        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(1); 
+        border-radius: 50px;
+      }
+      .card-img-top
+      {
+        border-radius:30px ;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 200px;
+        width: 350px;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #5a00ba;
+      }
+      .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .card:hover .overlay {
+        opacity: 1;
+      }
+      *{
+        margin: 0;
+        list-style: 0;
+      }
+      .slider{
+        overflow: hidden;
+        width: 100%;
+        height: 350px;
+        position: relative;
+      }
+      figure{
+        width: 500%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        transition: all 30s linear;
+        animation: 40s slidy infinite ;
+      }
+      .slide{
+        width: 20%;
+        height: 100%;
+        float: left;
+        position: relative;
+      }
+      .slide img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 300px;
+      }
+      @keyframes slidy {
+        0%{
+          left:0;
+        }
+        10%{
+          left: -100%;
+        }
+        20%{
+          left: -200%;
+        }
+        30%{
+          left: -300%;
+        }
+        40%{
+          left: -400%;
+        }
+        50%{
+          left: -400%;
+        }
+        60%{
+          left: -300%;
+        }
+        70%{
+          left: -200%;
+        }
+        85%{
+          left: -100%;
+        }
+        100%{
+          left: 0%;
+        }
+      
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+     
+    .dropdown:hover .dropdown-content {display: block;}
+    .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+    
+      p {
+        font-size: 17px;
+        font-family: Verdana !important
+      }
+      /*text color for dark cyanish blue*/
+    
+      
+      ol {
+       
+        font-size: 17px;
+        font-family: Verdana
+      }
+      /*The text color is different from the heading blue.This time it is the dark cyanish blue*/
+      
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        
+        font-family: Georgia, serif !important;
+       
+        text-align: center
+      }
+      
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: "Helvetica", sans-serif;
+      }
+      img {
+        max-width: 100%;
+      }
+      .slider-container {
+        height: 90%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+      .menu {
+        position: absolute;
+        left: 0;
+        z-index: 900;
+        width: 100%;
+        bottom: 0;
+      }
+      .menu label {
+        cursor: pointer;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: #fff;
+        border-radius: 50px;
+        margin: 0 0.2em 1em;
+      }
+      .menu label:hover,
+      .menu label:focus {
+        background: #1c87c9;
+      }
+      .slide-0 {
+        width: 100%;
+        height: 110%;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: 10;
+        padding: 8em 1em 0;
+        background-size: cover;
+        background-position: 50% 50%;
+        transition: left 0s 0.75s;
+      }
+      [id^="slide"]:checked + .slide-0 {
+        left: 0;
+        z-index: 100;
+        transition: left 0.65s ease-out;
+      }
+      .slide-1 {
+        background-image: url("https://img.etimg.com/thumb/msid-80769198,width-1200,height-900,imgsize-277838,overlay-etdefence/photo.jpg");
+      }
+      .slide-2 {
+        background-image: url("https://static.theprint.in/wp-content/uploads/2022/12/Women-fighter-pilots-Mohana-Singh-Avani-Chaturvedi-and-Bhawana-Kanth.jpg");
+      }
+    .slide-3 {background-image: url("https://www.gannett-cdn.com/presto/2022/03/07/USAT/63c287a4-b96b-4a14-b449-d19856a37724-GettyImages-891264822.jpg?width=660&height=441&fit=crop&format=pjpg&auto=webp");
+    }
+    .slide-4 {background-image: url("https://hellomeets.com/blog/content/images/2022/10/Top-women-Entrepreneurs-India.jpg");
+    }
+    .slide-5 {background-image: url("https://blog.playo.co/wp-content/uploads/2019/01/81561_sports.jpg");
+    }
+    .slide-6 {background-image: url("https://s01.sgp1.cdn.digitaloceanspaces.com/article/133540-lktvbtxwwf-1577344821.jpg");
+    }
+    .slide-7 {background-image: url("https://www.deccanherald.com/sites/dh/files/styles/gallery_thumbnails/public/gallery_images/2021/05/21/Female%20Politicians%20Fea.jpg");
+    }
+    .slide-8 {background-image: url("https://www.loksatta.com/wp-content/uploads/2022/08/IAS-women-officer-1.jpg");
+    }</style>
+
+   
+<body style="">
+
+    <div id="bg">
+    <div class="container-fluid bg bg-danger">
+      <nav class="nav nav-tab bg bg-danger">
+       
+        <ul class="nav nav-tabs" >
+          <li class="nav-item">
+             <span class="glyphicon glyphicon-home"><a href="home.html">Home</a></span></li>
+       
+            <li class="nav-item">   About
+                <div class="dropdown">
+                    <button class="dropbtn"></button>
+                    <div class="dropdown-content" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 
+                    Geneva, Verdana, sans-serif; font-size: medium;" >
+                       Information
+                    </div>
+                
+                  </div>
+                </li>
+        
+          <li class="nav-item">
+            <span class="glyphicon glyphicon-earphone">Contact</span></li>
+          <li class="nav-item">
+            <span class="glyphicon glyphicon-list-alt"><a href="loginstyle.php">Create New Account</a></span>
+          </li>
+           
+          
+        </ul>
+      </nav>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="logo" >
+        
+        <img src="hackathon-website.png" width="200px" height="200px" 
+        style="position: relative;left: 500px; ">
+        <h2>We Care For You</h2>
+        <h2 style="position: relative; left:300px">We Believe In You</h2>
+      </div>
+      <div class="slider-container">
+        <div class="menu">
+          <label for="slide-dot-1"></label>
+          <label for="slide-dot-2"></label>
+          
+        </div>
+        <input id="slide-dot-1" type="radio" name="slides" checked>
+        <div class="slide-0 slide-3"></div>
+        <input id="slide-dot-2" type="radio" name="slides">
+        <div class="slide-0 slide-4"></div>
+       
+      </div>
+      
+      <div class="container-fluid">
+              
+        <h1><mark>Business Women</mark></h1>
+        <!--come up with a better title later.-->
+        <div class="mainSection">
+          <div class="col-md-4">
+
+           
+          </div>
+          <div class="col-md-8">
+            <p> The business playing field has changed a lot in the past decade. Business careers for women are opening up every day, and more women are starting their own businesses. Research from Guidant Financial and LendingClub notes that there was a 58 percent uptick in businesses run by women between 2007 and 2018, and 4 out of every 10 small businesses are now owned by women. And according to Catalyst, there's at least one woman in senior management in 87 percent of global businesses.
+               
+              
+               </div>
+    
+        </div>
+    
+    
+          </div>
+      
+    
+      <!--move this image to the left of the above paragraph and add a comment of where the pic came from.-->
+      <!--The rest of this code will be for different pages so add more content ot the regular homepage.To code for the homepage focus on the area above this.-->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <h2><mark>Financial analyst</mark> </h2>
+    
+            <p>Financial analyst is one of the highest-paying jobs for women, per <a href="https://www.businessinsider.in/careers/the-20-highest-paying-jobs-for-women/articleshow/49496385.cms">BUsiness Insider</a>  , which extrapolated data from the U.S. Census Bureaus 2017 American Community Survey. Financial analysts help businesses make important investment decisions. They usually have a bachelor's degree in business administration, accounting, or a related field of study that included courses in business, economics, financial management, and statistics. Business Insider estimates the median salary for women in financial analyst positions is around $71,000 a year.  </p>
+    
+            
+          </div>
+          <div class="col-sm-3">
+    
+            <h2><mark>Human resources specialist</mark></h2>
+    
+            <p>Human resources specialists are responsible for filling job openings, advocating for employees, and training and developing employees, among other tasks. They might even travel to job fairs to recruit and interview candidates. This role requires empathy, coaching skills, and organization—qualities in which women outperform men, according to the Korn Ferry study. The first step toward becoming a human resources specialist is to earn a <a href="https://www.wgu.edu/online-business-degrees/human-resources-bachelors-program.html">bachelor’s degree in human resource</a> management or business administration. Even with a degree, candidates might need to have some analogous work experience, such as customer service work or an office job. Human resources specialists earn about $55,000 a year, PayScale says.</p>
+    
+            
+          </div>
+          <div class="col-sm-3">
+            <h2> <mark>Health services manager</mark> </h2>
+    
+            <p> Health services managers perform administrative duties for healthcare providers. Besides a <a href="https://www.wgu.edu/online-business-degrees/healthcare-management-bachelors-program.html">bachelor's degree in healthcare management or business administration</a>, prospective health services managers will need entry-level administrative experience in a healthcare environment. (Volunteer work at a hospital or private healthcare facility could be helpful.) The U.S. Bureau of Labor Statistics notes that health services managers make about $100,000 a year, on average, and predicts that the employment rate will increase 18 percent by 2028.</p>
+    
+          </div>
+          <p></p>
+          <div class="col-sm-3">
+            <h3><mark>Materials to Study</mark></h3>
+            <p>If you are preparing for MBA Exam, then read the below-linked articles:<br>
+              <a href="https://leverageedu.com/blog/mba-study-material/">Study Material and Syllabus</a><br>
+             
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--Remember to rmeove all the large p's that talk about the subject and put into the other webpages-->
+    
+      </div>
+      <div class="slider">
+        <figure id="fig">
+          <div class="slide">
+            <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/strong-woman-quotes-amy-poehler-1637706449.png?crop=1xw:1xh;center,top&resize=480:*" alt="">
+          </div>
+          <div class="slide">
+            <img src="https://ideas.hallmark.com/wp-content/uploads/2021/02/Empowering-Womens-Quote_4.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="https://i.pinimg.com/736x/1a/f2/78/1af27819600b0945de2055d880b4707c.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/strong-woman-quotesstrong-woman-quotes-beyonce-1637696752.png?crop=1xw:1xh;center,top&resize=480:*" alt="">
+          </div>
+          <div class="slide">
+            <img src="https://www.bentley.edu/sites/default/files/2015/01/23/quote_hepburn.jpg" alt="">
+          </div>
+        </figure>
+      
+        </div>
+    </body>
+    
+    </html>
