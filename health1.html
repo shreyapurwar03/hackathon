@@ -1,83 +1,388 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html>
+    <head>
+        
+        
+        
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YUMMY</title>
-    <LINK rel="stylesheet" href="stylehealth.css">
-</head>
-<body>
-    <nav id="navbar">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylehealth2.css">
+  <title>
+    Home Page
+</title>
+<script>
+   var counter =0;
+$('#next').click(function(){
+  var pos = $('#fig').position();
+  if(counter < 4){
+    console.log(counter);
+    counter++;
+      $('#fig').css("left",pos.left-( $(window).innerWidth() ));
+  }
+  else{
+    $('#fig').css("left","0px");
+    counter=0;
+  }
+});
+</script>
+    </head>
+    <style>
+        nav{
+    width:100%;
+  }
+  nav ul li{
+    display:inline-block;
+    list-style:none;
+    width:160px;
+    text-align:center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border: 1px dashed rgba(255,255,255, 0);
+    color:black;
+    padding:10px 0 10px 0;
+    margin:-1px -5px -1px -1px;
+    cursor:pointer;
+    transition:all .2s;
+    -webkit-transition:all .2s;
+    font-size: larger;
+  }
+  
+  
+ 
+  nav{
+    width:100%;
+  }
+  
+  nav ul li:hover{
+    /border:1px dashed #fff;/
+    background:rebeccapurple;
+    font-size: x-large;
+  }
+ 
+  nav ul{
+   
+    position:absolute;
+    width:100%;
+    padding:0;
+    z-index:100;
+  }
+  .main {
+    max-width: 300px;
+    padding: 10px;
+    margin: 15px auto;
+    background-color: #fff;
+  }
+ 
+  .logo
+  {
+    background-color: navy;
+  }
+  
+  .logo h2
+  {
+    display: inline;
+    color: pink;
+    text-align: left;
+    animation-name: Shreya;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    position: relative;
+  }
+  @keyframes Shreya
+  {
+    from
+    {
+        left: 0px;
+        color: palevioletred;
+    }
+    to
+    {
+        left:300px
         
-<ul>
-    <li class="item"><A HREF="home.html">HOME</A></li>
-    <li class="item"><A HREF="service-menu.html">SERVICES</A></li>
-    <li class="item"><A HREF="#">ABOUT US</A></li>
-    <li class="item"><A HREF="#">CONTACT US</A></li>
-</ul>
-
-    </nav>
-    <section id="home">
-		<div class="logo" >
-        
-			<img src="hackathon-website.png" width="400px" height="400px" 
-			style="position: relative;left: 100px; ">
-			
-			<h2 style="position: relative; left:100px">Menstrual Health</h2>
-	
-			</div>
-    </section>
-    <section class="services-container">
-        <h1 class="primary center">BEST DOCTORS FOR YOU!!</h1>
-        <div id='services'>
-            <div class="box">
-                <img src="https://www.drsheetalagarwal.com/wp-content/uploads/elementor/thumbs/drsheetalagarwal-oii4shgnp15wab1igvx3c18kdilxpu27bq1aaxls9m.jpg">
-                <h2 class="secondary center">Dr. SHEETAL</h2>
-                <a href="https://www.drsheetalagarwal.com/">VISIT</a>
-            </div>
        
+    }
+  }
+  :root {
+    --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+  }
+  
+  
+  .card {
+    background: #222;
+    border: 1px solid #dd2476;
+    color: rgba(250, 250, 250, 0.8);
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    border: 5px solid;
+    border-image-slice: 1;
+    background: var(--gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    border-image-source:  var(--gradient) !important; 
+    text-decoration: none;
+    transition: all .4s ease;
+  }
+  
+  .btn:hover, .btn:focus {
+        background: var(--gradient) !important;
+    -webkit-background-clip: none !important;
+    -webkit-text-fill-color: #fff !important;
+    border: 5px solid #fff !important; 
+    box-shadow: #222 1px 0 10px;
+    text-decoration: underline;
+  }
+  .card-img-top:hover 
+  {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1); 
+    border-radius: 50px;
+  }
+  .card-img-top
+  {
+    border-radius:30px ;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    width: 350px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #5a00ba;
+  }
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .card:hover .overlay {
+    opacity: 1;
+  }
+  *{
+    margin: 0;
+    list-style: 0;
+  }
+  .slider{
+    overflow: hidden;
+    width: 100%;
+    height: 350px;
+    position: relative;
+  }
+  figure{
+    width: 500%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    transition: all 30s linear;
+    animation: 40s slidy infinite ;
+  }
+  .slide{
+    width: 20%;
+    height: 100%;
+    float: left;
+    position: relative;
+  }
+  .slide img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+  }
+  @keyframes slidy {
+    0%{
+      left:0;
+    }
+    10%{
+      left: -100%;
+    }
+    20%{
+      left: -200%;
+    }
+    30%{
+      left: -300%;
+    }
+    40%{
+      left: -400%;
+    }
+    50%{
+      left: -400%;
+    }
+    60%{
+      left: -300%;
+    }
+    70%{
+      left: -200%;
+    }
+    85%{
+      left: -100%;
+    }
+    100%{
+      left: 0%;
+    }
+  
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+ 
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+    </style>
+
+   
+<body style="">
+
+    <div id="bg">
+    <div class="container-fluid bg bg-danger">
+      <nav class="nav nav-tab bg bg-danger">
+       
+        <ul class="nav nav-tabs" >
+          <li class="nav-item">
+             <span class="glyphicon glyphicon-home"><a href="home.html">Home</a></span></li>
+       
+           
+                
+                  </div>
+                </li>
         
-            <div class="box">
-                <img src='https://www.drvaishalisharma.com/wp-content/uploads/2020/02/amp-banner.jpg'>
-                    <h2 class="secondary center">Dr. VAISHALI</h2>
-                    <a href="https://www.drvaishalisharma.com/gynaecologist/delhi/">VISIT</a>
-            </div>
+          <li class="nav-item">
+            
+           
+          
+        </ul>
+      </nav>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="logo" >
         
-        
-            <div class="box">
-                <img src="https://imagesx.practo.com/providers/dr-chitra-agrawal-gynecologist-delhi-8e8e2ebe-1080-44b3-9375-eb8dc1104f94.jpg?i_type=t_100x100-4x">
-                <h2 class="secondary center">Dr. CHITRA</h2>
-                <a href="https://www.practo.com/delhi/doctor/dr-chitra-aggwarwal-gynecologist-obstetrician">VISIT</a>
-            </div>
+        <img src="hackathon-website.png" width="200px" height="200px" 
+        style="position: relative;left: 500px; ">
+        <h2>We Care For You</h2>
+        <h2 style="position: relative; left:300px">We Believe In You</h2>
+
         </div>
-    </section>
-    <DIV>
-        <section id="clients-section">
-            <h1 class="primary center">WHAT WE HOPE FOR YOU!!</h1>
-        <div id="clients">
-            <div id="client-item">
-            <img src="https://www.byrdie.com/thmb/CAr44qpyrW8Wn2DuSid7PxWXQaM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Stocksy_txp35f99a2eKb6300_Medium_3271355-fb417f0d8a9a4f959edec6e0dfb83c34.jpg">
+        <div class="container mx-auto mt-4">
+            <div class="row">
+              <div class="col-md-4" style="width:18rem">
+                <div class="card">
+            <img src="https://i0.wp.com/journomed.com/wp-content/uploads/2021/11/gynecology-concept-illustration_23-2148653934.jpg?resize=626%2C470&ssl=1" 
+            class="card-img-top" alt="..." width="200px" height="200px">
+            <div class="overlay">
+                <div class="text">We are here to assisst you with mental health</div>
+              </div>
+            <div class="card-body">
+              <h3 class="card-title" >MENTAL HEALTH</h3>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                 <a href="health1.html" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
+             
             </div>
-            <div id="client-item">
-                <img src="https://hips.hearstapps.com/hmg-prod/images/people-running-on-a-treadmill-in-health-club-royalty-free-image-478859478-1534780309.jpg?resize=1200:*">
-                </div>
-                <div id="client-item">
-                    <img src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/topic_centers/2020-5/snack-bento-box-1296x728-header.jpg?w=1155&h=1528">
+            </div>
+              </div>    
+                 <div class="col-md-4">
+          <div class="card" style="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZMAvCZZDwD4HXA8BwiiIUnwTAQXTXcW2mlgVozVWHDi0MnSw5QuVroEn4h8ovpEgJGqMUWezk9nc&usqp=CAU&ec=48665698"
+             class="card-img-top" alt="..." width="200px" height="200px" >
+             <div class="overlay">
+                <div class="text">We are here to assist you with your menstrual health</div>
+              </div>
+            <div class="card-body" >
+              <h3 class="card-title">MENSTRUAL HEALTH</h3>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="careers.html" class="btn  mr-2 "><i class="fas fa-link text text-centre"></i> Visit Site</a>
+             
+            </div>
+            </div>
+              </div>  
+              <div class="col-md-4">
+                <div class="card" style="">
+                  <img src="data:image/png;base64,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" 
+                  class="card-img-top" alt="..." width="200px" height="200px">
+                  <div class="overlay">
+                  
+                    <div class="text">
+                   Chat with our bot !! To find the solution of your problems.. 
+                   
                     </div>
-                    <div id="client-item">
-                        <img src="https://www.wikihealthnews.com/wp-content/uploads/2021/12/Personal-Hygiene-1.png">
-                        </div>
-                        <div id="client-item">
-                            <img src="https://media.licdn.com/dms/image/C5112AQHrH6Hz2Nr5RQ/article-cover_image-shrink_720_1280/0/1546240943778?e=2147483647&v=beta&t=gQaZW3t4p-U8yh2RcQeeuxiFr_9nScXu0yHb3t2dM0s">
-                            </div>
-        </div>
-        
-        
-        
-        </section>
-    </DIV>
-    
-    
-</body>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">CHAT BOT</h3>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="service-menu.html" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
+                   
+                  </div>
+                  </div>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <!--Photo Gallery-->
+                  <div class="slider">
+                    <figure id="fig">
+                      <div class="slide">
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/strong-woman-quotes-amy-poehler-1637706449.png?crop=1xw:1xh;center,top&resize=480:*" alt="">
+                      </div>
+                      <div class="slide">
+                        <img src="https://ideas.hallmark.com/wp-content/uploads/2021/02/Empowering-Womens-Quote_4.jpg" alt="">
+                      </div>
+                      <div class="slide">
+                        <img src="https://i.pinimg.com/736x/1a/f2/78/1af27819600b0945de2055d880b4707c.jpg" alt="">
+                      </div>
+                      <div class="slide">
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/strong-woman-quotesstrong-woman-quotes-beyonce-1637696752.png?crop=1xw:1xh;center,top&resize=480:*" alt="">
+                      </div>
+                      <div class="slide">
+                        <img src="https://www.bentley.edu/sites/default/files/2015/01/23/quote_hepburn.jpg" alt="">
+                      </div>
+                    </figure>
+                  
+                    </div>
+                  <div></div>
+                  <div id="next">Next</div>
+                  
+                </body>
+                  
 </html>
