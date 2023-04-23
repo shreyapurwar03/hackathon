@@ -52,7 +52,7 @@ $('#next').click(function(){
                     <button class="dropbtn"></button>
                     <div class="dropdown-content" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 
                     Geneva, Verdana, sans-serif; font-size: medium;" >
-                       Information
+                       
                     </div>
                 
                   </div>
