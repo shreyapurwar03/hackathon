@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
     if($result>0)
     {  
         header("Location:home.html");
-        //echo "Gaurang";
+        
     }
   
 }
