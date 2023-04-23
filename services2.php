@@ -262,6 +262,9 @@ body{
             <td>
                 Contact
             </td>
+            <td>
+                Type
+            </td>
             
         </tr>
         <tr>
@@ -277,6 +280,7 @@ body{
             <td><?php echo $row['Time']?></td>
             <td><?php echo $row['Price Per Person']?></td>
             <td><?php echo $row['Contact No.']?></td>
+            <td><?php echo $row['Type']?></td>
            
       
 
