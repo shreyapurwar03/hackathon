@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="style3.css">
 </head>
 <style>
+    .gaurang{
+       width:400px;
+       height:30px;
+    }
     * {
     margin:0;
     padding:0;
@@ -189,7 +193,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
             <img  src="hackathon-website.png" alt="logo" style="width:200px; height:100px">
 
         </div>
-        <h1 class="text text-white">Sign Up</h1>
+        
 
     </section>
     <section id="contact">
@@ -198,19 +202,44 @@ if($_SERVER['REQUEST_METHOD']=='POST')
             
         <div class="form-container sign-up-container">
                 <form action="#" method="post">
+        <div class>
+
+</div>
+<div class="row">
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header text-center">
                     <h1>Sign Up</h1>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="">UserName</label>
+                        <input type="text" class="form-control gaurang"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="">Email</label>
+                        <input type="text" class="form-control gaurang"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="">Password</label>
+                        <input type="password" class="form-control gaurang"/>
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit"  class="btn btn-primary"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+         
+    </div>
+
                     
-                    <label>
-                        <input type="text" placeholder="Name" name="username" autocomplete="off" required/>
-                    </label>
-                    <label>
-                        <input type="email" placeholder="Email" name="email" autocomplete="off" required/>
-                    </label>
-                    <label>
-                        <input type="password" placeholder="Password" name="password" autocomplete="off" required/>
-                    </label>
-                    <button type="submit" class="btn" >Sign Up</button>
-      
                 </form>
             </div>
     </section>

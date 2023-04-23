@@ -205,6 +205,9 @@ body{
           
         </ul>
       </nav>
+      <br>
+    <br>
+    <br>
       <div class="logo" >
         
         <img src="hackathon-website.png" width="200px" height="200px" 
@@ -217,6 +220,19 @@ body{
 
 
 <body style="background-color:white">
+<h3 style="position: relative; left:400px">Filter By Choice </h3>
+<form method="post">
+            <div style="position: relative; left:400px" >
+            <input type="submit" class="btn btn-primary btn-lg " id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" value="Indian" name="button1"></button>
+         
+            <input type="submit" class="btn btn-primary btn-lg " id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order"value="Chinese"name="button2"></button>
+
+            <input type="submit" class="btn btn-primary btn-lg " id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" value="Gujarati"name="button3"></button>
+
+            <input type="submit" class="btn btn-primary btn-lg " id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" value="All"name="button4"></button>
+        </div>
+                        
+    </form>
     
 <div class="container">
     <div class="row mt-5">
@@ -282,19 +298,7 @@ body{
 
 
 </div>
-<h3 style="position: relative; left:400px">Filter By Choice </h3>
-<form method="post">
-            <div style="position: relative; left:400px" >
-            <input type="submit" class="btn btn-primary btn-lg " id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" value="Indian" name="button1"></button>
-         
-            <input type="submit" class="btn btn-primary btn-lg " id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order"value="Chinese"name="button2"></button>
 
-            <input type="submit" class="btn btn-primary btn-lg " id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" value="Gujarati"name="button3"></button>
-
-            <input type="submit" class="btn btn-primary btn-lg " id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" value="All"name="button4"></button>
-        </div>
-                        
-    </form>
     <div class="container">
   <div class="image image1"></div>
   <div class="image image2"></div>

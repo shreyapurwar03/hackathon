@@ -144,23 +144,11 @@ nav{
           <li class="nav-item">
              <span class="glyphicon glyphicon-home"><a href="home.html">Home</a></span></li>
        
-            <li class="nav-item">   About
-                <div class="dropdown">
-                    <button class="dropbtn"></button>
-                    <div class="dropdown-content" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 
-                    Geneva, Verdana, sans-serif; font-size: medium;" >
-                       Information
-                    </div>
                 
                   </div>
                 </li>
         
-          <li class="nav-item">
-            <span class="glyphicon glyphicon-earphone">Contact</span></li>
-          <li class="nav-item">
-            <span class="glyphicon glyphicon-list-alt"><a href="sign.php">Create New Account</a></span>
-          </li>
-           
+                 
           
         </ul>
       </nav>
@@ -176,6 +164,19 @@ nav{
 
 
 <body style="background-color:white">
+<h3 style="position: relative; left:400px">Filter By Choice </h3>
+<form method="post">
+            <div style="position: relative; left:400px" >
+            <input type="submit" class="btn btn-primary btn-lg " id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" value="Accounts" name="button1"></button>
+         
+            <input type="submit" class="btn btn-primary btn-lg " id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order"value="Maths"name="button2"></button>
+
+            <input type="submit" class="btn btn-primary btn-lg " id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" value="Physics"name="button3"></button>
+
+            <input type="submit" class="btn btn-primary btn-lg " id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" value="All"name="button4"></button>
+        </div>
+                        
+    </form>
     
 <div class="container">
     <div class="row mt-5">
@@ -243,22 +244,7 @@ nav{
 
 
 </div>
-<form method="post">
-            <div class="text text-centre">
-        <input type="submit" name="button1"
-                value="Accounts"/>
-         
-        <input type="submit" name="button2"
-                value="Maths"/>
 
-                <input type="submit" name="button3"
-                value="Physics"/>
-
-                <input type="submit" name="button4"
-                value="All"/>
-        </div>
-                        
-    </form>
 </body>
 </head>
 </html>
