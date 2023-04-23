@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylehealth2.css">
+</head>
+<body>
+    <script>
+        var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
+
+if (window.matchMedia('(prefers-reduced-motion)').matches) {
+    vid.removeAttribute("autoplay");
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+}
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+vid.pause();
+// to capture IE10
+vidFade();
+}); 
+
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+})
+    </script>
+    <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
+        <!-- 
+      - Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
+      WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+      <source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">
+      <source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4">
+      
+      </video>
+      <div id="polina">
+      <h1>MENTAL HEALTH</h1>
+      <p>
+     
+      <p> Includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. 
+        It also helps determine how we handle stress, relate to others, and make healthy choices. </p>
+        <p><a href="home.html">GO TO HOME</a></p>
+      <p><a href="https://www.google.com/search?q=mental+health&rlz=1C1CHBF_enIN1014IN1014&sxsrf=APwXEdd7fjisjLrynaskmb7t7HVTNeY_nQ%3A1682234478677&ei=btxEZPiEKeey4-EPhaSe2A8&oq=ment&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgAMgQIIxAnMgcIABCKBRBDMgoIABCKBRCxAxBDMgcIABCKBRBDMgoIABCKBRCxAxBDMggIABCKBRCRAjIKCAAQigUQsQMQQzIHCAAQigUQQzIHCAAQigUQQzIKCAAQigUQsQMQQzoHCCMQ6gIQJzoNCAAQjwEQ6gIQtAIYAToNCC4QjwEQ6gIQtAIYAToLCAAQigUQsQMQgwE6EQguEIAEELEDEIMBEMcBENEDOgsIABCABBCxAxCDAToLCC4QigUQsQMQgwE6BwguEIoFEEM6CAgAEIoFELEDOggIABCABBCxA0oECEEYAFDPD1jTGWDCJWgBcAF4AIABzgKIAewIkgEFMi0yLjKYAQCgAQGwARTAAQHaAQYIARABGAo&sclient=gws-wiz-serp">Learn more</a></p>
+      <h2> How to cope up with stress? </h2>
+      <h3>* Diet</h3>
+      <p>Oatmeal </p>
+        <p>Whole-grain breads and whole-grain cereals</p>
+          <p>Drink plenty of water</p>
+        <p>Teer clear of foods that contain simple carbohydrates</p> 
+        <p>Sugary foods and drinks</p>
+        <h3>* Exercises to reduce stress</h3>
+        <p>Walking</p>
+        <p>Stair climbing</p>
+        <p>Jogging</p>
+        <p>Dancing</p>
+        <p>Bicycling</p>
+        <p>Yoga</p>
+        <p>Tai chi</p>
+        <p>Gaardening</p>
+        <h3>* Social changes</h3>
+        <p>Visit social media sites</p>
+        <p>Parties</p>
+        <p>Celebrating</p>
+        <p>Interaction with different people</p>
+        <p>Self talk</p>
+        
+    </div>
+</body>
+</html>
